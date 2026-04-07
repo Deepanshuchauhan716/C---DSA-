@@ -8,6 +8,15 @@ struct node{
     struct node * next;
 };
 
+struct node * PrintElement(struct node  *head){
+    struct node * temp = head;
+    do{
+        printf("%d ",temp->data);
+        temp = temp->next;
+    }while(temp != head);
+
+}
+
 int main(){
 
     struct node * head;
@@ -27,5 +36,6 @@ int main(){
     third->data = 14;
     third->next = head;
 
+    PrintElement(head);
 
 }
