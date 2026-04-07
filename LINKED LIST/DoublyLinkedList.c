@@ -7,6 +7,17 @@ struct node{
     struct node * next;
 };
 
+void printForward(struct node * head){
+    struct node * temp = head;
+
+    while(temp != NULL){
+        printf("%d <-> ",temp ->data);
+        temp = temp -> next;
+    }
+    printf("NULL\n");
+}
+
+
 int main(){
 
     struct node * head;
@@ -28,4 +39,7 @@ int main(){
     third->data = 14;
     third->prev = second;
     third->next = NULL;
+
+    printForward(head);
+    printBackward(third);
 }
