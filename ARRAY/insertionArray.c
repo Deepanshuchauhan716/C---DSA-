@@ -4,6 +4,7 @@ void PrintElemnt(int arr[],int n){
     for(int i = 0; i < n; i++){
         printf("%d ",arr[i]);
     }
+    printf("\n");
 }
 
 int InsertioAtBegin(int new_element,int n,int arr[]){
@@ -12,6 +13,8 @@ int InsertioAtBegin(int new_element,int n,int arr[]){
          }
          arr[0] = new_element;
          n++;
+
+         return n+1;
 }
 int main(){
 
@@ -25,7 +28,7 @@ int main(){
     printf("Enter new element Insert at begin : ");
     scanf("%d",&new_element);
 
-    InsertioAtBegin(new_element,n,arr);
+    n = InsertioAtBegin(new_element,n,arr);
     printf("After Insertion in array : ");
     PrintElemnt(arr,n);
 
