@@ -30,3 +30,11 @@ void pop(){
         free(temp);
     }
 }
+
+void peek(){
+    if(top == NULL){
+        printf("Stack is empty\n");
+    }else{
+        printf("Top element is %d",top->data);
+    }
+}
