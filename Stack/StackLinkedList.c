@@ -19,3 +19,14 @@ void push(int value){
     top = Newnode;
     printf("%d pushed into the stack \n",value);
 }
+
+void pop(){
+    if(top == NULL){
+        printf("Stack underflow !");
+    }else{
+        struct node * temp = top;
+        printf("%d popped from the stack \n",temp->data);
+        top = top->next;
+        free(temp);
+    }
+}
