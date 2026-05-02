@@ -4,6 +4,7 @@ int OriginalArray(int arr[],int n){
     for(int i = 0; i < n; i++){
         printf("%d ",arr[i]);
     }
+    printf("\n");
 }
 
 int BubbleSort(int arr[],int n){
@@ -26,4 +27,5 @@ int main(){
     OriginalArray(arr,n);
     printf("After sorting array : ");
     BubbleSort(arr,n);
+    OriginalArray(arr,n);
 }
