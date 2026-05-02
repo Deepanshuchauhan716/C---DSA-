@@ -10,3 +10,35 @@ int IsEmpty(){
 int IsFull(){
     return(tail == SIZE - 1);
 }
+
+void Push(int value){
+    if(IsFull()){
+        printf("Queue is Full !\n");
+        return;
+    }
+    if(IsEmpty()){
+        front = 0;
+        queue[++tail] = value;
+        printf("inserted %d\n",value);
+    }
+}
+
+void pop(){
+    if(IsEmpty()){
+        printf("Queue is empty !\n");
+        return;
+    }
+    printf("Deleted element %d :",queue[front]);
+    if(front == tail){
+        front = tail = - 1;
+    }else{
+        front++;
+    }
+}
+
+void display(){
+    if(IsEmpty()){
+        printf("Empty\n");
+        return;
+    }
+}
