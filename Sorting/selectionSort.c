@@ -29,4 +29,5 @@ int main(){
     OriginalArray(arr,n);
     printf("After Sorted array : ");
     SelectionSort(arr,n);
+    OriginalArray(arr,n);
 }
