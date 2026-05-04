@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #define SIZE 5
 int queue[SIZE];
 int front = -1, rear = -1;
@@ -8,7 +9,7 @@ int isEmpty(){
 }
 
 int isFull(){
-    rear = SIZE - 1;
+    return rear == SIZE - 1;
 }
 
 void Enqueue(int value){
@@ -42,4 +43,37 @@ void display(){
         printf("%d ",queue[i]);
     }
     printf("\n");
+}
+
+int main(){
+    int choice,value;
+    while(1){
+        printf("Stack operation\n");
+        printf(" 1 => Push element\n 2 => Pop element\n 3 => display element\n 4 => exit\n");
+        printf("Enter your choice : ");
+        scanf("%d",&choice);
+
+        switch(choice){
+            case 1:
+            printf("Enter value : ");
+            scanf("%d",&value);
+            Enqueue(value);
+            break;
+
+            case 2:
+            dequeue();
+            break;
+
+            case 3:
+            display();
+            break;
+
+            case 4:
+            exit(0);
+            break;
+
+            default:
+            printf("Invalid Choice !");
+        }
+    }
 }
