@@ -1,19 +1,17 @@
 #include<stdio.h>
 
-void print(int n){
+int fact(int n){
 
-    if(n > 5){      // Base case
-        return;
+    if(n == 0){
+        return 1;
     }
 
-    printf("%d\n", n);
-
-    print(n + 1);   // Recursive call
+    return n * fact(n - 1);
 }
 
 int main(){
 
-    print(1);
+    printf("%d", fact(5));
 
     return 0;
 }
