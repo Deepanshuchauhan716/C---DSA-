@@ -7,8 +7,18 @@ void OriginalArray(int arr[],int n){
     printf("\n");
 }
 
-int SelectionSort(){
-    
+int SelectionSort(int arr[],int n){
+    for(int i = 0; i < n ;i++){
+        int MinIndex = i;
+        for(int j = i + 1; j < n; j++){
+            if(arr[j] < arr[MinIndex]){
+                MinIndex = j;
+            }
+        }
+        int temp = arr[MinIndex];
+        arr[MinIndex] = arr[i];
+        arr[i] = temp;
+    }
 }
 
 int main(){
@@ -16,5 +26,7 @@ int main(){
     int n = sizeof(arr) / sizeof(arr[0]);
     printf("Original Array : ");
     OriginalArray(arr,n);
+    SelectionSort(arr,n);
+     OriginalArray(arr,n);
 
 }
