@@ -1,1 +1,0 @@
-// Ralloc function isliye use hota hai taaki hum malloc calloc ko resize kr sake
