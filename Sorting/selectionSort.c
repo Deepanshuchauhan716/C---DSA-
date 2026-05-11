@@ -1,33 +1,20 @@
 #include<stdio.h>
 
-int OriginalArray(int arr[],int n){
+void OriginalArray(int arr[],int n){
     for(int i = 0; i < n; i++){
         printf("%d ",arr[i]);
     }
+    printf("\n");
 }
 
-int SelectionSort(int arr[],int n){
-    for(int i = 0; i < n - 1; i++){
-        int MidIndex = i;
-        for(int j = i + 1; j < n; j++){
-            if(arr[j] < arr[MidIndex]){
-                MidIndex = j;
-            }
-        }
-        // swap
-        int temp = arr[i];
-        arr[i] = arr[MidIndex];
-        arr[MidIndex] = temp;
-    }
+int SelectionSort(){
+    
 }
 
 int main(){
-
-    int arr[] = {12,1,34,32,45,67,54,33,56,90,65};
+    int arr[] = {42, 7, 19, 88, 3, 56, 21, 90, 14, 67, 1, 35, 72, 9, 50, 28, 61, 11, 84, 5};
     int n = sizeof(arr) / sizeof(arr[0]);
-    printf("Original array : ");
+    printf("Original Array : ");
     OriginalArray(arr,n);
-    printf("After Sorted array : ");
-    SelectionSort(arr,n);
-    OriginalArray(arr,n);
+
 }
