@@ -28,6 +28,23 @@ struct node *  InserAtbegin(struct node * head, int value){
     return head;
 }
 
+struct node *  InserAtEnd(struct node * head, int val){
+
+    struct node * ptr2 = (struct node * )malloc(sizeof(struct node));
+
+    ptr2->data = val;
+    ptr2->next = NULL;
+
+    struct node * p = head;
+
+    while(p->next != NULL){
+        p = p->next;
+    }
+
+    p->next = ptr2;
+    return head;
+}
+
 int main(){
 
     struct node * head;
@@ -49,5 +66,7 @@ int main(){
 
     Traverse(head);
     head = InserAtbegin(head,11);
+    Traverse(head);
+    head = InserAtEnd(head,20);
     Traverse(head);
 }
