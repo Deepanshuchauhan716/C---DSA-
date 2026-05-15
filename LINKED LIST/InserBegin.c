@@ -14,13 +14,27 @@ void display(struct node * head){
     printf("\n");
 }
 
-struct node *  InsertBeginLL(struct node * head, int value){
+struct node *  InsertEndLL(struct node * head, int value){
     struct node * Newnode = (struct node *)malloc(sizeof(struct node));
+    struct node * temp = (struct node *)malloc(sizeof(struct node));
+    
     Newnode->data = value;
-    Newnode->next = head;
+    Newnode->next = NULL;
 
-    head = Newnode;
+    if(head == NULL){
 
+        head = Newnode;
+
+        return head;
+    }
+
+    temp  = head;
+
+    while(temp->next != NULL){
+        temp = temp->next;
+    }
+
+    temp->next = Newnode;
     return head;
 }
 int main(){
@@ -46,7 +60,7 @@ int main(){
     scanf("%d",&value);
 
     printf("After insertion : ");
-    head = InsertBeginLL(head,value);
+    head = InsertEndLL(head,value);
     display(head);
 
 
