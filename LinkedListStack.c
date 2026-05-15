@@ -27,14 +27,28 @@ void pop(){
     }
 }
 void peek(){
-
+    if(top == NULL){
+        printf("Stack is empty \n");
+    }else{
+        printf("Top element is %d" ,top->data);
+    }
 }
 void display(){
-
+    if(top == NULL){
+        printf("No element exist\n");
+    }else{
+        struct node * temp = top;
+        while(top != NULL){
+            printf("%d ",temp->data);
+            temp = temp->next;
+        }
+        printf("\n");
+    }
 }
 
 int main(){
 
     int choice,value;
+    
 
 }
