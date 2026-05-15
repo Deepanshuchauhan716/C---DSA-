@@ -14,6 +14,20 @@ void display(struct node * head){
     printf("\n");
 }
 
+void searching(struct node * head,int element){
+
+    int index = 0;
+    
+    struct node * temp = head;
+    while(temp != NULL){
+        index++;
+        if(temp->data == element){
+            printf("%d",index);
+        }
+        temp = temp->next;
+    }
+}
+
 
 int main(){
     struct node * head;
@@ -31,9 +45,15 @@ int main(){
     second->next = third;
 
     third->data = 14;
-    third->next = head;
+    third->next = NULL;
 
     printf("Original list : ");
     display(head);
+
+    int element;
+    printf("Enter element for search : ");
+    scanf("%d",&element);
+
+    searching(head,element);
     
 }
