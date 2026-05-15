@@ -47,8 +47,38 @@ void display(){
 }
 
 int main(){
-
     int choice,value;
-    
+    while(1){
+        printf("Stack operation\n");
+        printf(" 1 => Push element\n 2 => Pop element\n 3 => Peek\n 4 => display element\n 5 => exit\n");
+        printf("Enter your choice : ");
+        scanf("%d",&choice);
 
+        switch(choice){
+            case 1:
+            printf("Enter value : ");
+            scanf("%d",&value);
+            push(value);
+            break;
+
+            case 2:
+            pop();
+            break;
+
+            case 3:
+            peek();
+            break;
+
+            case 4:
+            display();
+            break;
+
+            case 5:
+            exit(0);
+            break;
+
+            default:
+            printf("Invalid Choice !");
+        }
+    }
 }
