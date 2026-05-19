@@ -27,7 +27,15 @@ int push(int value){
 int pop(){
     if(Isempty()){
         printf("Queue is empty\n");
+    }if(front == tail){
+        front = tail = -1;
+    }else{
+        front++;
     }
+}
+
+int display(){
+    
 }
 int main(){
 
