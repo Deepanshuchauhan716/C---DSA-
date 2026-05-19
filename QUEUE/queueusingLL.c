@@ -42,10 +42,29 @@ void Dequeue(){
     front = front->next;
 
     free(temp);
-     
-    
+
+}
+
+void Display(){
+      if(front == NULL){
+        printf("Queue is empty\n");
+        return;
+    }
+
+    struct node * temp;
+
+    temp = front;
+
+    printf("Elements are : ");
+
+    while(temp != NULL){
+        printf("%d ",temp->data);
+        temp = temp->next;
+    }
+
+    printf("\n");
 }
 
 int main(){
-
+    
 }
