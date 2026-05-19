@@ -24,6 +24,26 @@ void enqueue(int value){
         rear->next = NewNode;
         rear = NewNode;
     }
+
+    printf("%d element push is queue",value);
+}
+
+void Dequeue(){
+    if(front == NULL){
+        printf("Queue is empty\n");
+    }
+
+    struct node * temp;
+
+    temp  = front;
+
+    printf("%d is dequeue from queue\n");
+
+    front = front->next;
+
+    free(temp);
+     
+    
 }
 
 int main(){
