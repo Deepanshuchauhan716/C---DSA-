@@ -25,7 +25,7 @@ void enqueue(int value){
         rear = NewNode;
     }
 
-    printf("%d element push is queue",value);
+    printf("%d element push is queue\n",value);
 }
 
 void Dequeue(){
@@ -70,11 +70,11 @@ int main(){
     enqueue(20);
     enqueue(30);
 
-    display();
+    Display();
 
-    dequeue();
+    Dequeue();
 
-    display();
+    Display();
 
     return 0;
 }
